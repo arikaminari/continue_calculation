@@ -1,0 +1,109 @@
+<html lang="en"><head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&amp;display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <!-- Own CSS -->
+    <link rel="stylesheet" href="style.css">
+    <title>Qalyn calculator</title>
+  </head>
+  <body>
+    <div class="container mt-4 shadow p-3 mb-5 bg-white rounded">
+        <div class="row">
+            <div class="col col-sm-12">
+                <h1 class="text-center">Dowry calculator</h1>
+                <form>
+                    <label for="education_level">Education level:</label>
+                    <select id="educat" onchange="education(value)" >
+                        <option value="" selected=""></option>
+                        <option value="bachelor">Bachelor's degree</option>
+                        <option value="college">College degree</option>
+                        <option value="high_school">High school degree</option>
+                        <option value="middle_school">Middle school degree</option>
+                    </select>
+                    <hr>
+                    <label for="family_networth">Family networth</label>
+                    <select id="networth" onchange="familyNetWorth(value)">
+                        <option value="" selected=""></option>
+                        <option value="upper_class">More than 100,000$</option>
+                        <option value="middle_class">Between 50,000$ and 100,000$</option>
+                        <option value="lower_class">Less than 50,000$</option>
+                    </select>
+                    <hr>
+                    <!-- CONTINUE YOUR ASSIGNMENT HERE!!! -->
+                    <label>Caste</label>
+                    <select id="caste" onchange="solCaste(value)">
+                        <option value="" selected=""></option>
+                        <option value="B">Brahmin</option>
+                        <option value="K">Kshatriya</option>
+                        <option value="V">Vaishya</option>
+                        <option value="S">Shudra</option>
+                        <option value="-V">Varna - untouchable</option>
+                    </select>
+
+                    <hr>
+                    <label>Skills</label><br>
+                    <div id ="Skills">
+                        <input type="checkbox" value="10" onclick="skill()" class="box" multiple="multiple"><label>Playing on a musical instrument</label><br>
+                        <input type="checkbox" value="20" onclick="skill()" class="box" multiple="multiple"><label>Good cook</label><br>
+                        <input type="checkbox" value="15" onclick="skill()" class="box" multiple="multiple"><label>Easygoing character</label><br>
+                        <input type="checkbox" value="10" onclick="skill()" class="box" multiple="multiple"><label>Sings well</label><br>
+                    </div>
+                    <hr>
+
+                    <label>Age</label><br>
+                    <div class ="years">
+                        <input type="radio" name="aging" value="young" onclick="Age(value)"><label>Between 18-23</label><br>
+                        <input type="radio" name="aging" value="adult" onclick="Age(value)"><label>Between 24-27</label><br>
+                        <input type="radio" name="aging" value="elder" onclick="Age(value)"><label>28+</label><br>
+                    </div>
+                    <hr>
+                    
+                    <label>Reputation</label><br>
+                    <div class = "reput">
+                        <input type="checkbox" value="0.85" onclick="calcRep(this)"><label>Gossips about his/her parent's attitude</label><br>
+                        <input type="checkbox" value="0.9" onclick="calcRep(this)"><label>Gossips about his/her character</label><br>
+                        <input type="checkbox" value="-20" onclick="calcRep(this)"><label>General gossips around his/her person</label><br>
+                    </div>
+                    <hr>
+                </form>
+
+                <label>Lover letter</label><br>
+                <textarea id="letter" cols="130" rows="6" maxlength="500">Enter text here...</textarea>
+                <hr>
+
+                <button id="submit" type="button" class="btn btn-primary" onclick="calcResult()">Calculate price</button>
+                <p id='result'> Conclusion</p>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+  
+</body></html>
+
+
+
+<!-- <body>
+
+     <h3>Skills</h3><br>
+
+    <input type="checkbox" value="10" onclick="skill(this)" class="box"><label>Playing on a musical instrument</label>
+    <input type="checkbox" value="20" onclick="skill(this)" class="box"><label>Good cook</label>
+    <input type="checkbox" value="15" onclick="skill(this)" class="box"><label>Easygoing character</label>
+    <input type="checkbox" value="10" onclick="skill(this)" class="box"><label>Sings well</label>
+
+
+    <h3>Reputation</h3>
+    <input type="checkbox" value="0.85" onclick="calcRep(this)"><label>Gossips about his/her parent's attitude</label>
+    <input type="checkbox" value="0.9" onclick="calcRep(this)"><label>Gossips about his/her character</label>
+    <input type="checkbox" value="-20" onclick="calcRep(this)"><label>General gossips around his/her person</label>
+
+
+</body> -->
